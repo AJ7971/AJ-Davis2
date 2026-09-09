@@ -1,8 +1,8 @@
 # AJ-Davis2
 
-A powerful task automation tool that streamlines your workflow by connecting GitHub issues, pull requests, and CI/CD pipelines.
+A lightweight automation tool for managing GitHub workflows, issue tracking, and CI/CD task execution.
 
-## Installation
+## Install
 
 ```bash
 npm install aj-davis2
@@ -10,22 +10,22 @@ npm install aj-davis2
 
 ## Usage
 
-1. **Initialize your project** - Run `aj-davis2 init` to set up configuration files
-2. **Connect your repositories** - Link your GitHub repositories using your personal access token (see [GitHub Personal Access Tokens](https://docs.github.com/en/authentication/keeping-your-data-secure/managing-your-personal-access-tokens))
-3. **Define workflows** - Create workflow rules in your `aj-davis2.config.json` file
-4. **Execute automation** - Use `aj-davis2 run` to start automating your tasks
+1. Initialize your project by running `aj-davis2 init` to create the default configuration files.
+2. Connect your repositories and GitHub account using a personal access token as described in the [GitHub Personal Access Tokens documentation](https://docs.github.com/en/authentication/keeping-your-data-secure/managing-your-personal-access-tokens).
+3. Define workflow rules in your configuration file to automate tasks such as triage, review checks, and deployment steps.
+4. Run the automation with `aj-davis2 run` to start processing the configured workflow.
 
 ## Options
 
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
-| `verbose` | boolean | `false` | Enable detailed logging output |
-| `config` | string | `./aj-davis2.config.json` | Path to configuration file |
-| `timeout` | number | `30000` | Request timeout in milliseconds |
-| `retries` | number | `3` | Number of retry attempts on failure |
-| `dry-run` | boolean | `false` | Preview changes without applying them |
-| `token` | string | `process.env.GITHUB_TOKEN` | GitHub personal access token |
+| `verbose` | boolean | `false` | Enable detailed logging output for troubleshooting. |
+| `config` | string | `./aj-davis2.config.json` | Path to the project configuration file. |
+| `timeout` | number | `30000` | Request timeout in milliseconds. |
+| `retries` | number | `3` | Number of retry attempts after a failed task. |
+| `dry-run` | boolean | `false` | Preview workflow actions without applying changes. |
+| `token` | string | `process.env.GITHUB_TOKEN` | GitHub personal access token used for authentication. |
 
 ## Architecture
 
-![AJ-Davis2 Architecture Diagram](https://user-images.githubusercontent.com/1234567/example-diagram.png "System architecture showing how AJ-Davis2 connects GitHub, workflows, and automation tasks")
+![AJ-Davis2 workflow architecture diagram showing how repository data, automation rules, and CI/CD pipelines connect](https://user-images.githubusercontent.com/1234567/example-diagram.png)
